@@ -113,107 +113,67 @@
     
   </ul>
 </div>
-      <h1 class="archive-title">
-  
-    归档
-  
-</h1>
-
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2023/06/13/hive/">
         
-        <a href="/archives/2023/">
-          <div class="archive-year">
-            2023
-          </div>
-        </a>
-        
-        <div class="archives-year-cont">
-    
-    <div class="archive-item">
-  <span class="archive-artDate">
-    <time class="post-time" title="2023-06-13 13:23:46" datetime="2023-06-13T05:23:46.235Z" itemprop="datePublished">
-      Jun 13
-    </time>
-  </span>
-  <span class="archive-arttitle">
-    
-  </span>
-</div>
-  
-    
-    
-    <div class="archive-item">
-  <span class="archive-artDate">
-    <time class="post-time" title="2023-06-07 13:35:15" datetime="2023-06-07T05:35:15.000Z" itemprop="datePublished">
-      Jun 07
-    </time>
-  </span>
-  <span class="archive-arttitle">
-    
-        
-          <a href="/2023/06/07/spark/">
-            “spark(local)”
-          </a>
-          
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2023-06-13 13:23:46" datetime="2023-06-13T05:23:46.235Z" itemprop="datePublished">
+  2023-06-13</time>
+    </div>
+    |
+    <div class="post-tag">
       
-  </span>
-</div>
+    </div>
+    |
+    
   
-    
-    
-    <div class="archive-item">
-  <span class="archive-artDate">
-    <time class="post-time" title="2023-06-07 13:35:15" datetime="2023-06-07T05:35:15.000Z" itemprop="datePublished">
-      Jun 07
-    </time>
-  </span>
-  <span class="archive-arttitle">
-    
-        
-          <a href="/2023/06/07/%E2%80%9C%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E2%80%9D/">
-            “我的第一篇文章”
-          </a>
-          
+
+    <div class="post-visit">
+      <span id="busuanzi_container_page_pv">
+        <span id="busuanzi_value_page_pv"></span>
+        访问
+      </span>
+    </div>
+
+  
+
+
+  </div>
+
+  
+    <div class="post-word-count">
       
-  </span>
-</div>
+
+本文共309字。
+
+    </div>
   
-    
-    
-    <div class="archive-item">
-  <span class="archive-artDate">
-    <time class="post-time" title="2023-06-07 11:06:11" datetime="2023-06-07T03:06:11.149Z" itemprop="datePublished">
-      Jun 07
-    </time>
-  </span>
-  <span class="archive-arttitle">
-    
-        
-          <a href="/2023/06/07/hello-world/">
-            Hello World
-          </a>
-          
+
+  
+    <div class="post-cc">
+      版权声明：
       
-  </span>
-</div>
-  
-  
-    </div></section>
+        署名-非商业性使用-相同方式共享 | <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a>
+      
+    </div>
   
 
-
-<div class="pagination archive-pagination">
   
 
-</div>
 
+  <div class="article-entry" itemprop="articleBody">
+    <p>title: “hive”<br>date: 2023-06-13 13:25:22<br>tags:</p>
+<span id="more"></span>
+<p>第一步、在官网下载Hive的安装包<br>（1）进入官网<br><img src="/2023/06/13/hive/a1%20(1).png" alt="img"><br>（2）选择下载的镜像<br><img src="/2023/06/13/hive/a1%20(2).png" alt="img"><br>（3）选择下载的版本<br><img src="/2023/06/13/hive/a1%20(3).png" alt="img"><br>第二步、将安装包拷贝至虚拟机下<br><img src="/2023/06/13/hive/a1%20(4).png" alt="img"><br>第三步、解压安装包至&#x2F;software并将文件夹名改为Hive<br>tar -zxvf apache-hive-2.3.6-bin.tar.gz -C &#x2F;software<br>mv apache-hive-2.3.6-bin hive<br><img src="/2023/06/13/hive/a1%20(5).png" alt="img"><br><img src="/2023/06/13/hive/a1%20(6).png" alt="img"><br>第四步、 配置环境变量<br>#hive<br>export HIVE_HOME&#x3D;&#x2F;software&#x2F;hive<br>export PATH&#x3D;$PATH:$HIVE_HOME&#x2F;bin<br><img src="/2023/06/13/hive/a1%20(7).png" alt="img"><br>验证Hive是否安装成功<br><img src="/2023/06/13/hive/a1%20(8).png" alt="img"><br>第五步、配置hive-env.sh<br>将文件hive-env.sh.template改名为hive-env.sh，并在文件中配置hadoop以及hive相关的路径<br><img src="/2023/06/13/hive/a1%20(9).png" alt="img"><br>第六步、配置hive-site.xml<br>创建文件hive-site.xml,并配置一下内容<br><img src="/2023/06/13/hive/a1%20(10).png" alt="img"><br>第七步、下载mysql-connector-java-5.1.27，下载地址为<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/c-j/">https://downloads.mysql.com/archives/c-j/</a><br>将该文件解压，解压后文件夹中的mysql-connector-java-5.1.27-bin.jar拷贝至&#x2F;software&#x2F;hive&#x2F;lib文件夹中<br><img src="/2023/06/13/hive/a1%20(11).png" alt="img"><br>第八步、启动Hadoop<br>sbin&#x2F;start-all.sh<br>第九步、在HDFS上创建&#x2F;tmp和&#x2F;user&#x2F;hive&#x2F;warehouse两个目录并修改他们的同组权限可写<br><img src="/2023/06/13/hive/a1%20(12).png" alt="img"><br>在HDFS上查询<br><img src="/2023/06/13/hive/a1%20(13).png" alt="img"><br>第十步、 初始化数据库<br>schematool -dbType mysql -initSchema<br><img src="/2023/06/13/hive/a1%20(14).png" alt="img"><br>第十步、启动hive，查询数据库<br><img src="/2023/06/13/hive/a1%20(15).png" alt="img"></p>
+
+  </div>
+</article>
 
     </div>
     <footer class="footer-nav">
