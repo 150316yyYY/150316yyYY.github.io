@@ -116,15 +116,15 @@
       <article class="post" id="post">
   <header class="post-head">
     <h1 class="post-title">
-      <a class="title" href="/2023/06/20/kafka/">
-        “Kafka”
+      <a class="title" href="/2023/06/19/flume/">
+        “Flume”
       </a>
     </h1>
   </header>
   <div class="post-datetag">
     <div class="post-date">
-      <time class="post-time" title="2023-06-20 13:25:22" datetime="2023-06-20T05:25:22.000Z" itemprop="datePublished">
-  2023-06-20</time>
+      <time class="post-time" title="2023-06-19 08:42:23" datetime="2023-06-19T00:42:23.000Z" itemprop="datePublished">
+  2023-06-19</time>
     </div>
     |
     <div class="post-tag">
@@ -150,7 +150,7 @@
     <div class="post-word-count">
       
 
-本文共347字。
+本文共135字。
 
     </div>
   
@@ -169,8 +169,7 @@
 
   <div class="article-entry" itemprop="articleBody">
     <span id="more"></span>
-<p>一，所需资源下载kafka：<a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.0/kafka2.12.2.3.0.tgz">http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.0/kafka2.12.2.3.0.tgz</a><br>二，实验目的<br>1，Kafka的安装与部署<br>三，实验步骤<br>1，首先输入sha256sum apache-zookeeper-3.6.1-bin.tar.gz检查zookeeper完整性，若与预计输出相同则完整。<br> <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%871.png" alt="img"><br>2，进入&#x2F;data&#x2F;program目录将apache-zookeeper-3.6.1-bin.tar.gz解压到当前目录<br> <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%872.png" alt="img"><br>3，在&#x2F;data&#x2F;program&#x2F;目录下创建软链接zookeeper到&#x2F;data&#x2F;program&#x2F;apache-zookeeper-3.6.1-bin<br> <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%873.png" alt="img"><br>4，将zookeeper加入到环境变量<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%874.png" alt="img"><br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%875.png" alt="img"><br>5，进入&#x2F;data&#x2F;logs创建zookeeper目录(创建日志）<br>mkdir&#x2F;data&#x2F;logs&#x2F;zookeeper<br>6，进入&#x2F;data&#x2F;datalake&#x2F;创建zkdata目录（保存数据）<br>mkdir&#x2F;data&#x2F;datalake&#x2F;zkdata<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%876.png" alt="img"><br>7，进入&#x2F;data&#x2F;program&#x2F;zookeeper&#x2F;conf目录，复制zoo_sample.cfg改名为zoo.cfg<br><img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%877.png" alt="img"><br>8，进入zoo.cfg修改dataDir&#x3D;数据目录，并添加日志路径<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%878.png" alt="img"><br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%879.png" alt="img"><br>8，导入kafka包并且验证是否完整<br>输入sha256sum kafka_2.12-2.3.0.tgz<br>若与预计输出相同则完整。<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8710.png" alt="img"><br>9，进入&#x2F;data&#x2F;program目录解压hbase-2.2.4-bin.tar.gz到当前目录<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8711.png" alt="img"><br>10，在&#x2F;data&#x2F;program&#x2F;目录下创建软连接kafka到&#x2F;data&#x2F;program&#x2F;kafka_2.<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8712.png" alt="img"><br>    <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8713.png" alt="img"><br>      <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8714.png" alt="img"><br>12-2.3.0.tgz</p>
-<p>11，进入&#x2F;data&#x2F;logs创建kafka目录<br>mkdir&#x2F;data&#x2F;logs&#x2F;kafka<br>   <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8715.png" alt="img"><br>12,启动kafka<br>   <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8716.png" alt="img"><br>进入kafka软件包<br>查询zookeeper与kafka是否打开<br>   <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8717.png" alt="img"><br>     <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8718.png" alt="img"><br>13，查看kafka端口号<br>  <img src="/2023/06/20/kafka/%E5%9B%BE%E7%89%8719.png" alt="img"><br>Kafka配置完成。</p>
+<p>1、下载flume的gz包<br>链接；<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1VeelyVBttwLMRS-2LGzp8w?pwd=wanh">https://pan.baidu.com/s/1VeelyVBttwLMRS-2LGzp8w?pwd=wanh</a><br>2、解压：tar -zxvf apache-flume-1.7.0-bin.tar.gz<br> <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%871.png" alt="img"><br>3、改名为flume。<br>mv apache-flume-1.7.0-bin&#x2F; flume<br>  <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%872.png" alt="img"><br>4、查看执行文件<br>  <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%873.png" alt="img"><br>5、配置环境：<br>[root@HadoopMaster bin]# pwd<br>&#x2F;home&#x2F;hadoop&#x2F;software&#x2F;flume&#x2F;bin（bin目录下）<br>[root@HadoopMaster bin]# vim &#x2F;etc&#x2F;profile<br>#flume<br>export FLUME_HOME&#x3D;&#x2F;home&#x2F;newadd&#x2F;software&#x2F;flume<br>export PATH&#x3D;$PATH:$FLUME_HOME&#x2F;bin<br>  <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%874.png" alt="img"><br>6、修改配置文件<br>  <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%875.png" alt="img"><br>内容：export JAVA_HOME&#x3D;&#x2F;home&#x2F;newadd&#x2F;software&#x2F;jdk1.8.0_171<br>  <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%876.png" alt="img"><br>7、检验是否安装成功：<br>[root@HadoopMaster conf]# flume-ng version<br> <img src="/2023/06/19/flume/%E5%9B%BE%E7%89%877.png" alt="img"></p>
 
   </div>
 </article>
