@@ -116,15 +116,15 @@
       <article class="post" id="post">
   <header class="post-head">
     <h1 class="post-title">
-      <a class="title" href="/2023/06/13/Eagle/">
+      <a class="title" href="/2023/06/20/Eagle/">
         “Eagle”
       </a>
     </h1>
   </header>
   <div class="post-datetag">
     <div class="post-date">
-      <time class="post-time" title="2023-06-13 13:25:22" datetime="2023-06-13T05:25:22.000Z" itemprop="datePublished">
-  2023-06-13</time>
+      <time class="post-time" title="2023-06-20 13:25:22" datetime="2023-06-20T05:25:22.000Z" itemprop="datePublished">
+  2023-06-20</time>
     </div>
     |
     <div class="post-tag">
@@ -171,24 +171,24 @@
     <span id="more"></span>
 
 <p>随着互联网的迅速发展，数据处理变得越来越重要，在这个过程中，Kafka成为了数据处理的重要组成部分。Kafka是一个分布式的流数据处理平台，它可以处理大规模的数据，并支持高吞吐量的消息传输。在本次实训中，我将介绍如何使用GitHub建立个人博客，以及如何在Kafka集群中部署Eagle运维监控和使用SpringBoot搭建基础的Kafka流处理平台。</p>
-<p>一、使用GitHub建立个人博客<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%872.png" alt="img"><br>GitHub是一个非常流行的代码托管平台，也是一个很好的建立个人博客的地方。建立个人博客可以帮助我们更好地学习和分享知识，同时也可以展示我们的技术和能力。下面是建立个人博客的步骤：</p>
+<p>一、使用GitHub建立个人博客<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%872.png" alt="img"><br>GitHub是一个非常流行的代码托管平台，也是一个很好的建立个人博客的地方。建立个人博客可以帮助我们更好地学习和分享知识，同时也可以展示我们的技术和能力。下面是建立个人博客的步骤：</p>
 <ol>
-<li><p>注册GitHub账号<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%871.png" alt="img"><br>如果还没有GitHub账号，可以前往GitHub网站注册一个账号。注册完毕后，可以创建一个新的仓库来作为博客的托管仓库。</p>
+<li><p>注册GitHub账号<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%871.png" alt="img"><br>如果还没有GitHub账号，可以前往GitHub网站注册一个账号。注册完毕后，可以创建一个新的仓库来作为博客的托管仓库。</p>
 </li>
 <li><p>选择博客主题</p>
 </li>
 </ol>
-<p>GitHub上有许多优秀的博客主题可以选择，可以在GitHub主题库中搜索。选择一个喜欢的主题后，将其fork到自己的仓库中。<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%873.png" alt="img"><br>3. 修改博客配置文件</p>
-<p>博客的配置文件一般是_config.yml，可以根据自己的需求进行修改。修改完毕后，可以将修改后的代码提交到自己的仓库中。<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%874.png" alt="img"><br>4. 发布博客</p>
-<p>在博客的根目录下创建_posts文件夹，将写好的博客文件放入其中。然后使用git工具提交代码到自己的仓库中，就可以在GitHub Pages上发布自己的博客了。<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%875.png" alt="img"><br>二、在Kafka集群中部署Eagle运维监控<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%876.png" alt="img"><br>Eagle是一个开源的运维监控平台，可以用于监控Kafka集群中的各种指标和事件。通过Eagle可以监控Kafka的健康状态、性能指标、日志和异常事件等。下面是在Kafka集群中部署Eagle的步骤：</p>
+<p>GitHub上有许多优秀的博客主题可以选择，可以在GitHub主题库中搜索。选择一个喜欢的主题后，将其fork到自己的仓库中。<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%873.png" alt="img"><br>3. 修改博客配置文件</p>
+<p>博客的配置文件一般是_config.yml，可以根据自己的需求进行修改。修改完毕后，可以将修改后的代码提交到自己的仓库中。<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%874.png" alt="img"><br>4. 发布博客</p>
+<p>在博客的根目录下创建_posts文件夹，将写好的博客文件放入其中。然后使用git工具提交代码到自己的仓库中，就可以在GitHub Pages上发布自己的博客了。<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%875.png" alt="img"><br>二、在Kafka集群中部署Eagle运维监控<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%876.png" alt="img"><br>Eagle是一个开源的运维监控平台，可以用于监控Kafka集群中的各种指标和事件。通过Eagle可以监控Kafka的健康状态、性能指标、日志和异常事件等。下面是在Kafka集群中部署Eagle的步骤：</p>
 <ol>
 <li>安装Eagle</li>
 </ol>
-<p>可以从Eagle官网下载最新版本的Eagle，然后解压到指定的目录中。解压后，可以使用bin&#x2F;start-eagle.sh命令启动Eagle。<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%877.png" alt="img"><br>2. 配置Eagle</p>
+<p>可以从Eagle官网下载最新版本的Eagle，然后解压到指定的目录中。解压后，可以使用bin&#x2F;start-eagle.sh命令启动Eagle。<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%877.png" alt="img"><br>2. 配置Eagle</p>
 <p>在启动Eagle之前，需要先配置Eagle。可以修改conf&#x2F;eagle.conf文件，设置Kafka集群的相关信息。例如：</p>
-<p>eagle.kafka.zkQuorum&#x3D;localhost:2181<br>eagle.kafka.brokerList&#x3D;localhost:9092<br>eagle.kafka.consumerGroupId&#x3D;eagle-consumer-group<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%878.png" alt="img"><br>3. 启动Eagle</p>
-<p>修改完毕配置文件后，可以使用bin&#x2F;start-eagle.sh命令启动Eagle。启动后，可以在浏览器中输入<a target="_blank" rel="noopener" href="http://localhost:9090/eagle-web%E8%AE%BF%E9%97%AEEagle%E7%9A%84Web%E7%95%8C%E9%9D%A2%E3%80%82">http://localhost:9090/eagle-web访问Eagle的Web界面。</a><br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%879.png" alt="img"><br>4. 监控Kafka集群</p>
-<p>在Eagle的Web界面中，可以配置Kafka集群的监控指标和事件。例如，可以监控Kafka集群的健康状态、Broker的CPU和内存使用情况、消息的生产和消费速率等。同时，Eagle还支持自定义监控指标和事件，可以根据自己的需求进行配置。<br> <img src="/2023/06/13/Eagle/%E5%9B%BE%E7%89%876.png" alt="img"><br>三、使用SpringBoot搭建基础的Kafka流处理平台</p>
+<p>eagle.kafka.zkQuorum&#x3D;localhost:2181<br>eagle.kafka.brokerList&#x3D;localhost:9092<br>eagle.kafka.consumerGroupId&#x3D;eagle-consumer-group<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%878.png" alt="img"><br>3. 启动Eagle</p>
+<p>修改完毕配置文件后，可以使用bin&#x2F;start-eagle.sh命令启动Eagle。启动后，可以在浏览器中输入<a target="_blank" rel="noopener" href="http://localhost:9090/eagle-web%E8%AE%BF%E9%97%AEEagle%E7%9A%84Web%E7%95%8C%E9%9D%A2%E3%80%82">http://localhost:9090/eagle-web访问Eagle的Web界面。</a><br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%879.png" alt="img"><br>4. 监控Kafka集群</p>
+<p>在Eagle的Web界面中，可以配置Kafka集群的监控指标和事件。例如，可以监控Kafka集群的健康状态、Broker的CPU和内存使用情况、消息的生产和消费速率等。同时，Eagle还支持自定义监控指标和事件，可以根据自己的需求进行配置。<br> <img src="/2023/06/20/Eagle/%E5%9B%BE%E7%89%876.png" alt="img"><br>三、使用SpringBoot搭建基础的Kafka流处理平台</p>
 <p>SpringBoot是一个非常流行的Java开发框架，可以帮助我们快速搭建Web应用和微服务。在Kafka流处理中，SpringBoot也可以发挥很大作用。下面是使用SpringBoot搭建基础的Kafka流处理平台的步骤：</p>
 <ol>
 <li>创建SpringBoot项目</li>
