@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Hexo - </title>
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+      
+<link rel="stylesheet" href="/css/helpers.css">
+    
+    
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="loading-wrapper" data-loading="true">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="page" data-filter="true">
+    <div class="head" data-show="true">
+      <header class="head-header">
+  <div class="head-author">
+    <a href="/" class="head-author-link">
+      Hexo</a>
+    </div>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        Search</span>
+    </div> -->
+    <button class="bar-wrap" id="bar-wrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-about-link" href="/about">
+        关于</a>
+      
+    </div>
+  </div>
+</header>
+
+    </div>
+    <div class="main">
+      
+
+<div class="menu-bar-head" id="menu-bar" data-show="false">
+  <ul class="menu-bar-ul">
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts/">
+          
+              <span>Posts1</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts2/">
+          
+              <span>Posts2</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item  border ">
+          
+            <a href="/archives">
+          
+              <span>Archives</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+            <a href="/tags">
+          
+              <span>Tags</span>
+            </a>
+      </li>
+    
+    
+      <li class="menu-bar-item">
+        <a href="/about">
+          <span>关于</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2023/06/13/kafka/">
+        “Kafka”
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2023-06-13 13:25:22" datetime="2023-06-13T05:25:22.000Z" itemprop="datePublished">
+  2023-06-13</time>
+    </div>
+    |
+    <div class="post-tag">
+      
+    </div>
+    |
+    
+  
+
+    <div class="post-visit">
+      <span id="busuanzi_container_page_pv">
+        <span id="busuanzi_value_page_pv"></span>
+        访问
+      </span>
+    </div>
+
+  
+
+
+  </div>
+
+  
+    <div class="post-word-count">
+      
+
+本文共347字。
+
+    </div>
+  
+
+  
+    <div class="post-cc">
+      版权声明：
+      
+        署名-非商业性使用-相同方式共享 | <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a>
+      
+    </div>
+  
+
+  
+
+
+  <div class="article-entry" itemprop="articleBody">
+    <span id="more"></span>
+<p>一，所需资源下载kafka：<a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.0/kafka2.12.2.3.0.tgz">http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.0/kafka2.12.2.3.0.tgz</a><br>二，实验目的<br>1，Kafka的安装与部署<br>三，实验步骤<br>1，首先输入sha256sum apache-zookeeper-3.6.1-bin.tar.gz检查zookeeper完整性，若与预计输出相同则完整。<br> <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%871.png" alt="img"><br>2，进入&#x2F;data&#x2F;program目录将apache-zookeeper-3.6.1-bin.tar.gz解压到当前目录<br> <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%872.png" alt="img"><br>3，在&#x2F;data&#x2F;program&#x2F;目录下创建软链接zookeeper到&#x2F;data&#x2F;program&#x2F;apache-zookeeper-3.6.1-bin<br> <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%873.png" alt="img"><br>4，将zookeeper加入到环境变量<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%874.png" alt="img"><br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%875.png" alt="img"><br>5，进入&#x2F;data&#x2F;logs创建zookeeper目录(创建日志）<br>mkdir&#x2F;data&#x2F;logs&#x2F;zookeeper<br>6，进入&#x2F;data&#x2F;datalake&#x2F;创建zkdata目录（保存数据）<br>mkdir&#x2F;data&#x2F;datalake&#x2F;zkdata<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%876.png" alt="img"><br>7，进入&#x2F;data&#x2F;program&#x2F;zookeeper&#x2F;conf目录，复制zoo_sample.cfg改名为zoo.cfg<br><img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%877.png" alt="img"><br>8，进入zoo.cfg修改dataDir&#x3D;数据目录，并添加日志路径<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%878.png" alt="img"><br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%879.png" alt="img"><br>8，导入kafka包并且验证是否完整<br>输入sha256sum kafka_2.12-2.3.0.tgz<br>若与预计输出相同则完整。<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8710.png" alt="img"><br>9，进入&#x2F;data&#x2F;program目录解压hbase-2.2.4-bin.tar.gz到当前目录<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8711.png" alt="img"><br>10，在&#x2F;data&#x2F;program&#x2F;目录下创建软连接kafka到&#x2F;data&#x2F;program&#x2F;kafka_2.<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8712.png" alt="img"><br>    <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8713.png" alt="img"><br>      <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8714.png" alt="img"><br>12-2.3.0.tgz</p>
+<p>11，进入&#x2F;data&#x2F;logs创建kafka目录<br>mkdir&#x2F;data&#x2F;logs&#x2F;kafka<br>   <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8715.png" alt="img"><br>12,启动kafka<br>   <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8716.png" alt="img"><br>进入kafka软件包<br>查询zookeeper与kafka是否打开<br>   <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8717.png" alt="img"><br>     <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8718.png" alt="img"><br>13，查看kafka端口号<br>  <img src="/2023/06/13/kafka/%E5%9B%BE%E7%89%8719.png" alt="img"><br>Kafka配置完成。</p>
+
+  </div>
+</article>
+
+    </div>
+    <footer class="footer-nav">
+      <div class="footer">
+        <div class="back-top" id="back-top" title="Back to top">
+          <i class="icon icon-chevron-bar-up"></i>
+        </div>
+        <span class="footer-msg">
+  
+    <div class="icp">
+      <img src="/img/icp.png" alt="icp备案">
+      <a href="https://beian.miit.gov.cn/" class="icp-text" target="_blank">
+        京ICP备2021005293号
+      </a>
+    </div>
+  
+
+  
+
+  
+  
+
+    <div>
+      <span id="busuanzi_container_site_pv">
+        <span id="busuanzi_value_site_pv">?</span> PV
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <span id="busuanzi_value_site_uv">?</span> UV
+      </span>
+    </div>
+
+  
+
+
+
+  Copyright &copy;
+  2020
+  
+  
+    <span class="timeDivide">-</span>
+    2023
+  
+  John Doe.
+  Power by
+  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  and
+  <a href="https://github.com/Cerallin/hexo-theme-yuzu"
+      target="_blank" rel="external nofollow" title="v2.4">
+    Theme Yuzu</a>.
+</span>
+
+      </div>
+    </footer>
+    
+
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/theme.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+
+  
+  <script>
+      expend = "展开";
+      collapse = "收起";
+  </script>
+  
+  
+<script src="/js/toc.js"></script>
+
+
+
+
+
+  </div>
+</body>
